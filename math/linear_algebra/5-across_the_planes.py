@@ -7,7 +7,6 @@ This module provides the function `add_matrices2D`, which takes two
 If the matrices are not the same shape, the function returns None.
 """
 
-
 def add_matrices2D(mat1, mat2):
     """
     Adds two 2D matrices element-wise.
