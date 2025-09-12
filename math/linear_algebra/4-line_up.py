@@ -8,6 +8,7 @@ element-wise sum. If the two arrays are not the same length, the
 function returns None.
 """
 
+
 def add_arrays(arr1, arr2):
     """
     Adds two arrays element-wise.

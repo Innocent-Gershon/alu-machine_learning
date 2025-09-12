@@ -4,8 +4,8 @@ Module for transposing a 2D matrix.
 
 This module provides the function `matrix_transpose` which returns
 a new matrix that is the transpose of the given 2D matrix.
-
 """
+
 
 def matrix_transpose(matrix):
     """
