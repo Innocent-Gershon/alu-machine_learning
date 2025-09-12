@@ -1,22 +1,22 @@
 #!/usr/bin/env python3
 """
-Module for transposing a 2D array without using any imports.
+Module for transposing numpy arrays.
 
-Provides the function `np_transpose` which returns the transpose
-of a 2D list or list of lists. The original array is not modified.
+Provides the function `np_transpose` which returns the transpose of
+a numpy.ndarray. Works for 1D, 2D, and higher-dimensional arrays.
 """
 
 
+import numpy as np
+
 def np_transpose(matrix):
     """
-    Returns the transpose of a 2D list.
+    Returns the transpose of a numpy.ndarray.
 
     Args:
-        matrix (list of lists): The input 2D array.
+        matrix (numpy.ndarray): The input array.
 
     Returns:
-        list of lists: A new array representing the transpose.
+        numpy.ndarray: A new array representing the transpose of the input.
     """
-    if not matrix:  # Handle empty list
-        return []
-    return [[matrix[j][i] for j in range(len(matrix))] for i in range(len(matrix[0]))]
+    return np.transpose(matrix)
