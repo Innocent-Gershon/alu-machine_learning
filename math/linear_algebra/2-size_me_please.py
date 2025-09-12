@@ -6,6 +6,7 @@ This module contains the function `matrix_shape` which determines
 the dimensions of a matrix and returns them as a list of integers.
 """
 
+
 def matrix_shape(matrix):
     """
     Calculates the shape (dimensions) of a matrix.
