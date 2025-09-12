@@ -1,9 +1,18 @@
 #!/usr/bin/env python3
 
 def matrix_shape(matrix):
-    """Calculates the shape (dimensions) of a matrix."""
+    """
+    Calculates the shape (dimensions) of a matrix.
+
+    Args:
+        matrix (list): A nested list representing the matrix.
+
+    Returns:
+        list: A list of integers representing the size of each dimension.
+    """
     shape = []
     while isinstance(matrix, list):
         shape.append(len(matrix))
-        matrix = matrix[0]  # go one level deeper
+        matrix = matrix[0]
     return shape
+
