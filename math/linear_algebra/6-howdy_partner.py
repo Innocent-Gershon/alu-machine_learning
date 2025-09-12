@@ -2,21 +2,20 @@
 """
 Module for concatenating two arrays.
 
-This module provides the function `cat_arrays` which takes two arrays
-(lists of numbers) and returns a new list containing all elements
-from the first array followed by all elements from the second array.
+Provides the function `cat_arrays` which returns a new list containing
+all elements of arr1 followed by all elements of arr2.
 """
+
 
 def cat_arrays(arr1, arr2):
     """
     Concatenates two arrays into a new list.
 
     Args:
-        arr1 (list): The first array (list of ints or floats).
-        arr2 (list): The second array (list of ints or floats).
+        arr1 (list): First array of ints/floats.
+        arr2 (list): Second array of ints/floats.
 
     Returns:
-        list: A new list containing all elements from arr1 followed
-              by all elements from arr2.
+        list: A new list containing elements of arr1 then arr2.
     """
     return arr1 + arr2
