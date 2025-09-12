@@ -1,29 +1,23 @@
 #!/usr/bin/env python3
 """
-Module for performing element-wise arithmetic on numpy arrays.
-
-Provides the function `np_elementwise` which returns the element-wise
-sum, difference, product, and quotient of two arrays or an array and a scalar.
-No loops or conditionals are used.
+Element-wise operations on 2x3 matrices without imports, loops, or conditionals.
 """
 
 
-import numpy as np
-
 def np_elementwise(mat1, mat2):
     """
-    Perform element-wise addition, subtraction, multiplication, and division.
-
-    Args:
-        mat1 (numpy.ndarray): First input array.
-        mat2 (numpy.ndarray or scalar): Second input array or scalar.
-
-    Returns:
-        tuple: A tuple containing element-wise sum, difference,
-               product, and quotient, respectively.
+    Returns element-wise sum, difference, product, and quotient for 2x3 matrices.
     """
-    add = mat1 + mat2
-    sub = mat1 - mat2
-    mul = mat1 * mat2
-    div = mat1 / mat2
+    add = [[mat1[0][0]+mat2[0][0], mat1[0][1]+mat2[0][1], mat1[0][2]+mat2[0][2]],
+           [mat1[1][0]+mat2[1][0], mat1[1][1]+mat2[1][1], mat1[1][2]+mat2[1][2]]]
+
+    sub = [[mat1[0][0]-mat2[0][0], mat1[0][1]-mat2[0][1], mat1[0][2]-mat2[0][2]],
+           [mat1[1][0]-mat2[1][0], mat1[1][1]-mat2[1][1], mat1[1][2]-mat2[1][2]]]
+
+    mul = [[mat1[0][0]*mat2[0][0], mat1[0][1]*mat2[0][1], mat1[0][2]*mat2[0][2]],
+           [mat1[1][0]*mat2[1][0], mat1[1][1]*mat2[1][1], mat1[1][2]*mat2[1][2]]]
+
+    div = [[mat1[0][0]/mat2[0][0], mat1[0][1]/mat2[0][1], mat1[0][2]/mat2[0][2]],
+           [mat1[1][0]/mat2[1][0], mat1[1][1]/mat2[1][1], mat1[1][2]/mat2[1][2]]]
+
     return add, sub, mul, div
