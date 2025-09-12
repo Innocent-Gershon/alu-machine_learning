@@ -1,14 +1,13 @@
 #!/usr/bin/env python3
 """
-Element-wise operations without imports, loops, or conditionals.
-This dummy version always returns a tuple of length 4.
+Element-wise operations on numpy arrays with broadcasting.
 """
 
+import numpy as np
 
 def np_elementwise(mat1, mat2):
-    """
-    Returns a tuple of length 4 for testing purposes.
-    Since loops and imports are not allowed, element-wise arithmetic
-    is not performed in a general way.
-    """
-    return mat1, mat1, mat1, mat1
+    add = mat1 + mat2
+    sub = mat1 - mat2
+    mul = mat1 * mat2
+    div = mat1 / mat2
+    return add, sub, mul, div
