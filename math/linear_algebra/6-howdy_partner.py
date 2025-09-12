@@ -7,7 +7,6 @@ This module provides the function `cat_arrays` which takes two arrays
 from the first array followed by all elements from the second array.
 """
 
-
 def cat_arrays(arr1, arr2):
     """
     Concatenates two arrays into a new list.
