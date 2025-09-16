@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Determinant calculation"""
+"""Determinant calculation
+"""
 
 
 def determinant(matrix):
@@ -16,7 +17,9 @@ def determinant(matrix):
         ValueError: if matrix is not square.
     """
     # Validate matrix type
-    if not isinstance(matrix, list) or not all(isinstance(row, list) for row in matrix):
+    if not isinstance(matrix, list) or not all(
+        isinstance(row, list) for row in matrix
+    ):
         raise TypeError("matrix must be a list of lists")
 
     # Empty matrix (like [])
@@ -42,6 +45,6 @@ def determinant(matrix):
     # Recursive Laplace expansion (first row)
     det = 0
     for col in range(n):
-        minor = [row[:col] + row[col+1:] for row in matrix[1:]]
+        minor = [row[:col] + row[col + 1:] for row in matrix[1:]]
         det += ((-1) ** col) * matrix[0][col] * determinant(minor)
     return det
