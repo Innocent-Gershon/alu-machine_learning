@@ -2,8 +2,6 @@
 """Minor matrix calculation
 """
 
-from 0-determinant import determinant
-
 
 def minor(matrix):
     """Calculates the minor matrix of a square matrix.
@@ -37,11 +35,28 @@ def minor(matrix):
     if n == 1:
         return [[1]]
 
+    def determinant(mat):
+        """Helper to calculate determinant recursively."""
+        size = len(mat)
+        if size == 1:
+            return mat[0][0]
+        if size == 2:
+            return mat[0][0] * mat[1][1] - mat[0][1] * mat[1][0]
+        det = 0
+        for col in range(size):
+            submatrix = [
+                r[:col] + r[col + 1:]
+                for k, r in enumerate(mat)
+                if k != 0
+            ]
+            det += ((-1) ** col) * mat[0][col] * determinant(submatrix)
+        return det
+
+    # Build the minor matrix
     minors = []
     for i in range(n):
         row_minors = []
         for j in range(n):
-            # Build submatrix by removing row i and column j
             submatrix = [
                 r[:j] + r[j + 1:]
                 for k, r in enumerate(matrix)
