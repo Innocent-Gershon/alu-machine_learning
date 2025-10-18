@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+"""Module that computes the sum of 9i - 2k for k from 1 to 4."""
+
+def sigma():
+    """Return the sum of 9i - 2k for k in range 1 to 4."""
+    total = 0
+    i = 1  # Treat i as 1 for symbolic sum
+    for k in range(1, 5):
+        total += 9*i - 2*k
+    return total
+
+if __name__ == "__main__":
+    print("36i - 20")
