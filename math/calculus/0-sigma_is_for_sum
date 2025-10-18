@@ -1,7 +1,23 @@
 #!/usr/bin/env python3
 """
-Prints the value 3 as the answer to Task 0.
+0-sigma.py
+Calculates the sum of integers from 2 to 5.
 """
 
+
+def summation_2_to_5():
+    """
+    Calculates the sum of integers from 2 to 5.
+
+    Returns:
+        int: The sum of 2 + 3 + 4 + 5.
+    """
+    total_sum = 0
+    for i in range(2, 6):  # range(start, stop) goes up to stop-1
+        total_sum += i
+    return total_sum
+
+
 if __name__ == "__main__":
-    print(3)
+    result = summation_2_to_5()
+    print(f"The sum from i=2 to 5 is: {result}")
