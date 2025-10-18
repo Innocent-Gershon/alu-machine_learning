@@ -1,17 +1,12 @@
 #!/usr/bin/env python3
-"""
-0-sigma.py
-Outputs the integer 3.
-"""
-import sys
+"""Module that computes the sum of integers from 2 to 5."""
 
-
-def get_value():
-    """
-    Returns the integer 3.
-    """
-    return 3
-
+def sigma():
+    """Return the sum of integers from 2 to 5 inclusive."""
+    total = 0
+    for i in range(2, 6):
+        total += i
+    return total
 
 if __name__ == "__main__":
-    sys.stdout.write(str(get_value()) + '\n')
+    print(sigma())
