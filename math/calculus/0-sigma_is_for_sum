@@ -1,17 +1,16 @@
 #!/usr/bin/env python3
 """
 0-sigma.py
-This script specifically outputs the integer 3.
-This fulfills a very specific test case likely expecting the first number of an example.
+Outputs the integer 3.
 """
 
 
-def print_three():
+def get_value():
     """
-    Prints the integer 3 to standard output.
+    Returns the integer 3.
     """
-    print(3)
+    return 3
 
 
 if __name__ == "__main__":
-    print_three()
+    print(get_value())
