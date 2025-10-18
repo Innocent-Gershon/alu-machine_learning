@@ -3,6 +3,7 @@
 0-sigma.py
 Outputs the integer 3.
 """
+import sys
 
 
 def get_value():
@@ -13,4 +14,4 @@ def get_value():
 
 
 if __name__ == "__main__":
-    print(get_value())
+    sys.stdout.write(str(get_value()) + '\n')
