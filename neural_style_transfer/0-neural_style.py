@@ -1,5 +1,11 @@
+
 #!/usr/bin/env python3
 """Neural Style Transfer module"""
+
+i#!/usr/bin/env python3
+"""
+0-neural_style.py
+"""
 
 import numpy as np
 import tensorflow as tf
@@ -30,6 +36,7 @@ class NST:
                 "with shape (h, w, 3)"
             )
 
+
         if (not isinstance(content_image, np.ndarray) or
                 len(content_image.shape) != 3 or
                 content_image.shape[2] != 3):
@@ -37,6 +44,10 @@ class NST:
                 "content_image must be a numpy.ndarray "
                 "with shape (h, w, 3)"
             )
+
+        # Validate content_image
+        if (not isinstance(con           )
+
 
         if (not isinstance(alpha, (int, float)) or alpha < 0):
             raise TypeError(
